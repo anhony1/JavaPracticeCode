@@ -273,6 +273,70 @@ public class CustomListImpl{
 
     }
 
+    public boolean deleteMidNode(Node n){
+
+        if(n == null || n.next == null){
+            return false;
+        }
+
+
+        n.data = n.next.data;
+        n.next = n.next.next;
+
+        //this is the way that CTCI author solves the problem
+        //I noticed that you could avoid creating a new Node altogether so thats what I did.\
+
+//        Node next = n.next;
+//        n.data = next.data;
+//        n.next = next.next;
+
+        return true;
+
+    }
+
+    public CustomListImpl partitionList(int x){
+
+        Node currentNode = head;
+
+        CustomListImpl lessThan = new CustomListImpl();
+        CustomListImpl greaterThan = new CustomListImpl();
+
+        while(currentNode != null){
+
+            if((int)currentNode.data < x){
+                lessThan.add(currentNode.data);
+            }else if((int)currentNode.data >= x){
+                greaterThan.add(currentNode.data);
+            }
+            currentNode = currentNode.next;
+        }
+
+        System.out.println(lessThan + " - > " + greaterThan);
+
+        lessThan.appendList(getHead(greaterThan));
+        return lessThan;
+    }
+
+    private Node getHead(CustomListImpl list){
+        return list.head;
+    }
+
+    public void appendList(Node listHead){
+
+        Node currentNode = head;
+
+        while(currentNode != null){
+
+            if (currentNode.next == null) {
+
+                currentNode.next = listHead;
+                break;
+
+            }
+            currentNode = currentNode.next;
+        }
+    }
+
     private static class Node{
 
         Node next;
