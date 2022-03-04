@@ -311,9 +311,12 @@ public class CustomListImpl{
             currentNode = currentNode.next;
         }
 
-        System.out.println(lessThan + " - > " + greaterThan);
-
+        if(lessThan.lengthOfList() == 0){
+            System.out.println(greaterThan);
+            return greaterThan;
+        }
         lessThan.appendList(getHead(greaterThan));
+        System.out.println(lessThan + " - > " + greaterThan);
         return lessThan;
     }
 
@@ -335,6 +338,10 @@ public class CustomListImpl{
             }
             currentNode = currentNode.next;
         }
+    }
+
+    public boolean checkIfPali(){
+        return true;
     }
 
     private static class Node{
