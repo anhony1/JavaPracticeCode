@@ -1,33 +1,32 @@
 package com.company;
-
-
-import com.company.customLists.CustomListImpl;
-
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-
-import static java.lang.Math.PI;
 import static java.lang.Math.pow;
+
+//experimenting with polymorphism
+class Bird{
+    public void sing(){
+        System.out.println("Tweet");
+    }
+}
+
+class Robin extends Bird{
+    public void sing(){
+        System.out.println("Twoot");
+    }
+}
 
 public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList<Integer> listA = new LinkedList<Integer>();
-        LinkedList<Integer> listB = new LinkedList<Integer>();
 
-        listA.add(9);
-        listA.add(2);
-        listA.add(3);
+    }
 
-        listB.add(3);
-        listB.add(2);
-        listB.add(1);
+    public boolean paliCheckList(LinkedList list){
 
-        //System.out.println("Result: " + sumListFromBack(listA, listB));
+        return true;
 
-        System.out.println("Result: " + sumListFromFront(listA, listB));
 
     }
 
@@ -92,8 +91,5 @@ public class Main {
         }
         return (int)total;
     }
-
-
-
 
 }
