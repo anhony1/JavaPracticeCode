@@ -1,4 +1,5 @@
 package com.company;
+import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
 
 import java.util.HashSet;
@@ -23,21 +24,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LinkedList<String> list1 = new LinkedList<>();
-        LinkedList<String> list2 = new LinkedList<>();
 
-        list1.add("d");
-        list1.add("a");
-        list1.add("d");
 
-        Iterator it1 = list1.iterator();
+    }
 
-        list2.add("a");
-        list2.add("b");
-        list2.add("c");
+    public static int binarySearchMethod(int[] array){
 
-        System.out.println("result: " + intersectCheck(list1, list2));
-
+        return 0;
     }
 
     public static Object testMethod(Object node){
