@@ -1,5 +1,6 @@
 package com.company.customCircularLinkedList;
 
+import com.company.customDoublyLinkedList.DoublyLinkedList;
 import com.company.customLists.CustomListImpl;
 
 public class CircularLinkedList {
@@ -77,7 +78,6 @@ public class CircularLinkedList {
         decreaseSize();
     }
 
-
     public void removeAtData(Object data){
 
         if(head == null){
@@ -136,7 +136,6 @@ public class CircularLinkedList {
         }
         return count;
     }
-
 
     private class Node{
         Node next;

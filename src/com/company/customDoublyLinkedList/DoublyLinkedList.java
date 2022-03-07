@@ -11,8 +11,7 @@ public class DoublyLinkedList {
 
     }
 
-    public void add(Object data)
-    {
+    public void add(Object data) {
         Node tempNode = new Node(data);
         Node currentNode = head;
 
@@ -30,8 +29,7 @@ public class DoublyLinkedList {
 
     }
 
-    public void prepend(Object data)
-    {
+    public void prepend(Object data) {
         Node newNode = new Node(data);
 
         newNode.next = head;
@@ -45,8 +43,7 @@ public class DoublyLinkedList {
 
     }
 
-    public void removeAtData(Object data)
-    {
+    public void removeAtData(Object data) {
         Node currentNode = head;
 
         if(head == null){
@@ -75,8 +72,7 @@ public class DoublyLinkedList {
 
     }
 
-    public void removeAtIndex(int index)
-    {
+    public void removeAtIndex(int index) {
 
         if(head == null && index == 1){
             return;
