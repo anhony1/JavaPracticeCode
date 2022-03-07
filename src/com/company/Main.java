@@ -30,12 +30,18 @@ public class Main {
         list1.add("a");
         list1.add("d");
 
+        Iterator it1 = list1.iterator();
+
         list2.add("a");
         list2.add("b");
         list2.add("c");
 
         System.out.println("result: " + intersectCheck(list1, list2));
 
+    }
+
+    public static Object testMethod(Object node){
+     return node;
     }
 
     // CTCI 2.7 -> checking if two lists have a node in which they intersect at
