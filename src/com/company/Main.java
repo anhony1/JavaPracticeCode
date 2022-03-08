@@ -24,13 +24,31 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int[] arr;
 
+        arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+
+        int result = binarySearchMethod(arr, 133);
+
+        System.out.println("Result: " + result);
 
     }
 
-    public static int binarySearchMethod(int[] array){
+    public static int binarySearchMethod(int[] array, int target){
 
-        return 0;
+        int left = 0;
+        int right = array.length - 1;
+
+        while(left <= right){
+
+            int mid = left + (right - left) /2;
+
+            if(array[mid] == target) return array[mid];
+            if(array[mid] > target) right = mid - 1;
+            else left = mid + 1;
+
+        }
+        return -1;
     }
 
     public static Object testMethod(Object node){
