@@ -2,6 +2,7 @@ package com.company;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -24,13 +25,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] arr;
-
-        arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-
-        int result = binarySearchMethod(arr, 133);
-
-        System.out.println("Result: " + result);
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        //fuck this goddamn shit
+        arrList.add(5);
 
     }
 
@@ -135,6 +132,45 @@ public class Main {
 
         return total;
 
+    }
+
+    public int firstBadVersion(int n) {
+
+        int mid = n/2;
+
+        if(isBadVersion(mid) == true){
+
+            if(isBadVersion(mid-1) == false){
+                return mid-1;
+            }
+
+        }else{
+
+            while(mid != n){
+
+                if(isBadVersion(mid) == true){
+                    return mid;
+                }
+
+                mid++;
+
+            }
+
+        }
+
+        while(mid != 0){
+            if(isBadVersion(mid) == false){
+                return mid;
+            }
+            mid--;
+        }
+
+        return 0;
+
+    }
+
+    public boolean isBadVersion(int value){
+        return true;
     }
 
     //CTCI 2.5 -> assume that the integers are stored foward
