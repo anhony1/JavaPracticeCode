@@ -1,4 +1,5 @@
 package com.company;
+import com.company.QueueStack.QueueStack;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
 
@@ -25,9 +26,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrList = new ArrayList<Integer>();
-        //fuck this goddamn shit
-        arrList.add(5);
+        QueueStack qs = new QueueStack();
+
+        qs.enqueue(10);
+        qs.enqueue(12);
+        qs.enqueue(13);
+        qs.enqueue(14);
+        qs.enqueue(15);
+        qs.enqueue(16);
+        qs.enqueue(17);
+
+        qs.dequeue();
+
+        System.out.println(qs);
+
 
     }
 
