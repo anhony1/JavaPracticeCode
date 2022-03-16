@@ -3,10 +3,9 @@ import com.company.QueueStack.QueueStack;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.lang.reflect.Array;
+import java.util.*;
+
 import static java.lang.Math.pow;
 
 //experimenting with polymorphism
@@ -26,19 +25,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        QueueStack qs = new QueueStack();
+//        int a = 1;
+//
+//        int b = 3;
+//
+//        double result1 = Math.pow(a,b);
+//        System.out.println("Result: " + result);
 
-        qs.enqueue(10);
-        qs.enqueue(12);
-        qs.enqueue(13);
-        qs.enqueue(14);
-        qs.enqueue(15);
-        qs.enqueue(16);
-        qs.enqueue(17);
+        int n = 153;
+        String result = Integer.toString(n);
 
-        qs.dequeue();
+        for(int i = 0; i < result.length(); i ++){
+            double total =+ Math.pow(Integer.parseInt(String.valueOf(result.charAt(i))), result.length());
+        }
 
-        System.out.println(qs);
+        ArrayList<Integer> list = new ArrayList<>();
 
 
     }
