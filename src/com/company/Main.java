@@ -2,6 +2,7 @@ package com.company;
 import com.company.QueueStack.QueueStack;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
+import com.company.sortStack.SortStack;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -25,22 +26,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        int a = 1;
-//
-//        int b = 3;
-//
-//        double result1 = Math.pow(a,b);
-//        System.out.println("Result: " + result);
+        SortStack test = new SortStack();
 
-        int n = 153;
-        String result = Integer.toString(n);
+        test.add(5);
+        test.add(6);
+        test.add(7);
+        test.add(1);
+        test.add(2);
+        test.add(6);
+        test.add(8);
+        test.add(0);
 
-        for(int i = 0; i < result.length(); i ++){
-            double total =+ Math.pow(Integer.parseInt(String.valueOf(result.charAt(i))), result.length());
-        }
-
-        ArrayList<Integer> list = new ArrayList<>();
-
+        System.out.println(test);;
 
     }
 
