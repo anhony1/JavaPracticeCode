@@ -1,4 +1,5 @@
 package com.company;
+import com.company.AnimalShelter.AnimalShelter;
 import com.company.QueueStack.QueueStack;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
@@ -10,35 +11,54 @@ import java.util.*;
 import static java.lang.Math.pow;
 
 //experimenting with polymorphism
-class Bird{
-    public void sing(){
-        System.out.println("Tweet");
-    }
-}
-
-class Robin extends Bird{
-    public void sing(){
-        System.out.println("Twoot");
-    }
-}
+//class Bird{
+//    public void sing(){
+//        System.out.println("Tweet");
+//    }
+//}
+//
+//class Robin extends Bird{
+//    public void sing(){
+//        System.out.println("Twoot");
+//    }
+//}
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SortStack test = new SortStack();
+        int[] intArray = new int[]{3,4,5,6,7,8};
+        //result should be 28
 
-        test.add(5);
-        test.add(6);
-        test.add(7);
-        test.add(1);
-        test.add(2);
-        test.add(6);
-        test.add(8);
-        test.add(0);
+        System.out.println(subsetCheck(intArray));
 
-        System.out.println(test);;
+    }
 
+    public static int subsetCheck(int num[]){
+
+        if(num.length == 0 ){
+            return 0;
+        }
+        int n = num.length;
+        int total = 0;
+        int subTotal;
+
+        for(int i = 0; i < (1<<n); i++){
+            subTotal = 0;
+            for(int j = 0; j < n; j++){
+
+                if( (i & (1 << j)) > 0){
+                    if(subTotal == 0){
+                        subTotal = num[j];
+                    }else{
+                        subTotal = subTotal ^ num[j];
+                    }
+                }
+            }
+            total += subTotal;
+        }
+
+        return total;
     }
 
     public static int binarySearchMethod(int[] array, int target){
