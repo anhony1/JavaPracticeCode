@@ -27,10 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[]{3,4,5,6,7,8};
-        //result should be 28
 
-        System.out.println(subsetCheck(intArray));
 
     }
 
