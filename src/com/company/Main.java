@@ -3,6 +3,7 @@ import com.company.AnimalShelter.AnimalShelter;
 import com.company.QueueStack.QueueStack;
 import com.company.arrayStack.arrayStack;
 import com.company.customCircularLinkedList.CircularLinkedList;
+import com.company.customGraph.customGraph;
 import com.company.sortStack.SortStack;
 
 import java.lang.reflect.Array;
@@ -27,6 +28,31 @@ public class Main {
 
     public static void main(String[] args) {
 
+        customGraph<Integer> g = new customGraph<Integer>();
+
+        g.addEdge(0, 1, true);
+        g.addEdge(0, 4, true);
+        g.addEdge(1, 2, true);
+        g.addEdge(1, 3, true);
+        g.addEdge(1, 4, true);
+        g.addEdge(2, 3, true);
+        g.addEdge(3, 4, true);
+
+        // Printing the graph
+        System.out.println("Graph:\n"
+                + g.toString());
+
+        // Gives the no of vertices in the graph.
+        g.getVertexCount();
+
+        // Gives the no of edges in the graph.
+        g.getEdgesCount(true);
+
+        // Tells whether the edge is present or not.
+        g.hasEdge(3, 4);
+
+        // Tells whether vertex is present or not
+        g.hasVertex(5);
 
 
     }
