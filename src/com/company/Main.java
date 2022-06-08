@@ -57,6 +57,24 @@ public class Main {
 
     }
 
+    public static boolean containsDuplicate(int[] nums) {
+        HashSet set = new HashSet();
+        for(int i = 0; i < nums.length; i++){
+            if(set.contains(nums[i])){
+                return true;
+            }else{
+                set.add(nums[i]);
+            }
+        }
+        return false;
+    }
+
+    public static void isAnagram(String s, String t){
+
+
+
+    }
+
     public static int subsetCheck(int num[]){
 
         if(num.length == 0 ){
